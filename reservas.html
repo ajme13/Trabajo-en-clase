@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones</title>
+</head>
+<body>
+
+    <header>
+        <h1>Baleadas el buen ingeniero</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="">Inicio</a>    
+            </li>
+
+            <li>
+                <a href="">Nosotros</a>    
+            </li>
+
+            <li>
+                <a href="">Menu</a>    
+            </li>
+
+            <li>
+                <a href="">Reservaciones</a>    
+            </li>
+
+            <li>
+                <a href="">Contacto</a>    
+            </li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <h2>Formulario de reservacion</h2>
+
+        <form action="afiliados.php" method="post" enctype="multipart/form-data"> <!--action apunta al backend(post es el metodo recomendado) -->
+
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label>Ingrese su nombre</label>
+                    <input type="text" name="Nombre" id="nombre" required placeholder="Ingrese su nombre" minlength="10" maxlength="100">
+                    <br>
+                    <label>Ingrese su apellido</label>
+                    <input type="text" name="Apellido" id="apellido" required placeholder="Ingrese su apellido" minlength="13" maxlength="13" pattern="[0-9]{4}-[0-9]{4}-[0-9]{5}">
+                    <br>
+                    <label>Ingrese su numero de telefono</label>
+                    <input type="tel" name="Telefono" id="telefono" required placeholder="Ingrese su numero de telefono" minlength="11" maxlength="11">
+                    <br>
+                    <label>Ingrese su correo</label>
+                    <input type="text" name="Correo" id="correo" required placeholder="Ingrese su correo" minlength="10" maxlength="100">
+
+                   <div>
+                    <label>Seleccione la sucursal: </label>
+                    <select name="Sucursal" id="sucursal">
+                        <option selected>Blvd. Morazan</option>
+                        <option>City Mall</option>
+                        <option>Mall Premier</option>
+                    </select>
+
+                    <br>
+                    
+                    <button>Enviar</button>
+                </div>
+            </fieldset>
+
+        </form>
+    </main>
+</body>
+</html>
